@@ -6,4 +6,3 @@ model = T5ForConditionalGeneration.from_pretrained("google-t5/t5-small")
 input_ids = tokenizer("translate English to German: The house is wonderful.", return_tensors="pt").input_ids
 outputs = model.generate(input_ids)
 print(tokenizer.decode(outputs[0], skip_special_tokens=True))
-print("new")
